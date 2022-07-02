@@ -11,23 +11,27 @@ const Tabs = () => {
     {
       tabIndex: 0,
       tabTitle: 'flights',
+      tabIcon: 'ri-flight-takeoff-line',
     },
     {
       tabIndex: 1,
       tabTitle: 'hotels',
+      tabIcon: 'ri-hotel-bed-fill',
     },
     {
       tabIndex: 2,
       tabTitle: 'villa',
+      tabIcon: 'ri-home-6-fill',
     },
     {
       tabIndex: 3,
       tabTitle: 'taxi',
+      tabIcon: 'ri-taxi-fill',
     },
   ];
 
   const checkActiveTab = (tabIndex) => {
-    return tabIndex === activeTab ? 'active tab-item' : 'tab-item';
+    return tabIndex === activeTab ? 'active tab-item flex flex--column' : 'tab-item flex flex--column';
   };
 
   const handleTabClick = (tabIndex) => {
@@ -35,28 +39,25 @@ const Tabs = () => {
   };
 
   return (
-    <div className="tabs">
-      <div className="tabs-header">
-        <ul className="tabs-list">
+    <div className='tabs flex flex--column'>
+      <div className='tabs-header'>
+        <ul className='tabs-list flex'>
           {tabs.map((tab) => {
             return (
-              <li key={tab.tabIndex} className={checkActiveTab(tab.tabIndex)}>
-                <button
-                  onClick={() => {
-                    handleTabClick(tab.tabIndex);
-                  }}
-                  type="button"
-                  className="tab-button"
-                >
-                  <i className="fas fa-home" />
-                  {tab.tabTitle}
-                </button>
+              <li
+                onClick={() => {
+                  handleTabClick(tab.tabIndex);
+                }}
+                key={tab.tabIndex}
+                className={checkActiveTab(tab.tabIndex)}>
+                <i className={tab.tabIcon} />
+                {tab.tabTitle}
               </li>
             );
           })}
         </ul>
       </div>
-      <div className="tabs-content">
+      <div className='tabs-content'>
         {activeTab === 0 && <Flights />}
         {activeTab === 1 && <Hotels />}
         {activeTab === 2 && <Villa />}

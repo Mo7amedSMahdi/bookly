@@ -1,0 +1,45 @@
+.tabs {
+  position: relative;
+  z-index: 1;
+  margin-top: -15rem;
+  width: 80%;
+  margin-inline: auto;
+
+  --gap: 1.25rem;
+}
+
+.tabs-header {
+}
+
+.tabs-list {
+  justify-content: flex-start;
+  align-items: center;
+
+  --gap: 2rem;
+}
+
+.tab-item {
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem;
+  --gap: 0.625rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0.002em;
+  border-radius: 0.5rem;
+  min-width: 2.938rem;
+}
+
+.tab-item i {
+  font-size: 1.5rem;
+}
+
+.active {
+  background-color: var(--clr-blue-tab);
+}

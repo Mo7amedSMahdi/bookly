@@ -5,11 +5,13 @@
   --clr-light: #f9f9f9;
   --clr-lgray: #f0f2f6;
   --clr-black: #282e44;
+  --clr-text-dark: #2e3758;
   --clr-dark: #475073;
   --clr-dgray: #c2c6d2;
   --clr-red: #eb5757;
   --clr-ored: rgba(223, 20, 45, 0.06);
   --clr-blue: #0076ff;
+  --clr-blue-tab: #0a6ada;
 
   --gr-bg-home: linear-gradient(180deg, #ebf0f3 24.26%, #ffffff 100%);
   --gr-bg-nav: linear-gradient(141.08deg, #0a69da 32.24%, #0856c8 115.93%, #0231a5 164.9%);
@@ -104,6 +106,7 @@ input:focus {
 
 /* Remove default button styles */
 button,
+input[type='text'],
 input[type='submit'],
 input[type='reset'],
 input[type='search'] {
@@ -114,6 +117,15 @@ input[type='search'] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+input[type='text'] {
+  cursor: text;
+}
+
+ul {
+  display: inline-flex;
+  gap: var(--gap, 1rem);
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
