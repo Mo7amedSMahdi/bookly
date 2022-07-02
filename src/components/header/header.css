@@ -1,0 +1,136 @@
+.header {
+  position: relative;
+  min-height: max(50%, 300px);
+  background: var(--gr-bg-header);
+}
+
+.header-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../images/bg-header.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.plane-overlay {
+  position: absolute;
+  width: max(15%, 136px);
+  height: 50px;
+  top: max(15%, 160px);
+  right: max(5%, 50px);
+  background-image: url(../../images/plane.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.header-container {
+  z-index: 2;
+  position: relative;
+}
+
+.header-nav-container {
+  padding: 2rem 2.75rem;
+  max-height: fit-content;
+  justify-content: flex-start;
+  align-items: center;
+
+  --gap: 1rem;
+}
+
+.header-logo {
+  width: 100%;
+  max-width: 120px;
+}
+
+.header-nav {
+  flex-grow: 1;
+}
+
+.header-nav-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-nav-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  display: flex;
+  align-items: center;
+  color: var(--clr-light);
+}
+
+.header-item {
+  background-color: rgb(108, 134, 177, 0.22);
+  padding: 0.313rem 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4rem;
+  backdrop-filter: blur(0.1rem);
+  color: var(--clr-light);
+  cursor: pointer;
+
+  --gap: 0.625rem;
+}
+
+.item-image img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.item-title p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.user-profile {
+  align-items: center;
+  justify-content: center;
+  --gap: 0.625rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.item-list {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  right: 0;
+  background-color: rgb(108, 134, 177, 0.22);
+  border-radius: 1rem;
+  backdrop-filter: blur(0.1rem);
+  color: var(--clr-light);
+  padding: 1rem;
+  opacity: 0;
+  scale: 0;
+}
+
+.item-inline-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.652rem;
+}

@@ -1,13 +1,192 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  /* Colors */
+  --clr-light: #f9f9f9;
+  --clr-lgray: #f0f2f6;
+  --clr-black: #282e44;
+  --clr-text-dark: #2e3758;
+  --clr-dark: #475073;
+  --clr-dgray: #c2c6d2;
+  --clr-red: #eb5757;
+  --clr-ored: rgba(223, 20, 45, 0.06);
+  --clr-blue: #0076ff;
+  --clr-blue-tab: #0a6ada;
+
+  --gr-bg-home: linear-gradient(180deg, #ebf0f3 24.26%, #ffffff 100%);
+  --gr-bg-nav: linear-gradient(141.08deg, #0a69da 32.24%, #0856c8 115.93%, #0231a5 164.9%);
+  --gr-bg-header: linear-gradient(168.05deg, #023b96 5.04%, #022357 91.26%);
+
+  /* font families */
+  --ff-sans: 'Open Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* RESET */
+
+/* Box sizing rules */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* Remove default link style */
+a {
+  color: unset;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff-sans);
+  background: var(--gr-bg-home);
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* Remove default button styles */
+button,
+input[type='text'],
+input[type='submit'],
+input[type='reset'],
+input[type='search'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input[type='text'] {
+  cursor: text;
+}
+
+ul {
+  display: inline-flex;
+  gap: var(--gap, 1rem);
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility classes */
+
+.hidden {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.btn--primary {
+  border: 2px solid black;
+}
+
+.btn--icon {
+  display: block;
+  width: 29px;
+  padding: 0;
+  margin: 0;
 }
