@@ -102,3 +102,7 @@
   border-radius: 6px;
   padding-inline: 2rem;
 }
+
+.spacial-offers {
+  overflow: auto;
+}

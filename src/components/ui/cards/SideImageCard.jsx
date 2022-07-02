@@ -1,21 +1,26 @@
 import React from 'react';
+import './cards.css';
 
-const SideImageCard = ({ sideImage, sideImageAlt = '' }) => {
+const SideImageCard = () => {
   return (
-    <div className='side-image-card'>
+    <div className='side-image-card flex'>
       <div className='left'>
-        <img src={sideImage} alt={sideImageAlt} />
+        <img src='https://picsum.photos/200/300' alt='img' />
       </div>
       <div className='right'>
-        <div className='card-body'>
-          <div className='body-header'>
-            <div className='header-tag'>{tag}</div>
-            <div className='header-content'>{content}</div>
+        <div className='card-body flex flex--column'>
+          <div className='body-header flex flex--column'>
+            <p className='header-tag'>Citytuch</p>
+            <h3 className='header-title'>Up to $599 discount</h3>
+            <p className='header-sub-title'>Domestic flight</p>
           </div>
-          <div className='body-footer'>
+          <div className='body-footer flex'>
             <div className='footer-content'>
-              {footer - title}:<span>{footerContent}</span>
+              <p>
+                Cupon:<span>dhshjab09d</span>
+              </p>
             </div>
+            <button className='btn btn--border'>book now</button>
           </div>
         </div>
       </div>

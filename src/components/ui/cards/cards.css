@@ -1,0 +1,17 @@
+.side-image-card {
+  padding: 1.5rem 1.625rem;
+  --gap: 2rem;
+}
+
+.side-image-card .left {
+  flex-grow: 1;
+}
+
+.side-image-card .right {
+  flex-grow: 2;
+}
+
+.left img {
+  border-radius: 1rem;
+  width: 100%;
+}

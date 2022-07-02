@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FormField from './FormField';
+import SideImageCard from '../../ui/cards/SideImageCard';
 import './flights.css';
 
 const Flights = () => {
@@ -48,6 +49,11 @@ const Flights = () => {
               </button>
             </div>
           </form>
+        </div>
+
+        <div className='spacial-offers flex'>
+          <SideImageCard />
+          <SideImageCard />
         </div>
       </div>
     </div>
