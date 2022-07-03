@@ -125,3 +125,14 @@
   letter-spacing: 0.0026em;
   color: #282e44;
 }
+
+.best-offers {
+  padding: 1.375rem 2.5rem;
+  background: var(--clr-light);
+  border-radius: 1rem;
+}
+
+.section-header {
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import FormField from './FormField';
 import SideImageCard from '../../ui/cards/SideImageCard';
+import ListItem from '../../ui/list/ListItem';
+import AdBanner from '../../ui/banners/AdBanner';
 import './flights.css';
 
 const Flights = () => {
@@ -54,13 +56,46 @@ const Flights = () => {
       <div className='offers flex flex--column'>
         <h2 className='section-title'>Special Offer</h2>
         <div className='spacial-offers flex'>
-          <SideImageCard />
-          <SideImageCard />
-          <SideImageCard />
-          <SideImageCard />
-          <SideImageCard />
-          <SideImageCard />
+          <SideImageCard
+            image='https://picsum.photos/201/301'
+            tag='Citytuch'
+            title='Up to $599 discount'
+            subTitle='Domestic flight'
+            coupon='dhshjab09d'
+          />
+          <SideImageCard
+            image='https://picsum.photos/202/302'
+            tag='Citytuch'
+            title='Up to $599 discount'
+            subTitle='Domestic flight'
+            coupon='dhshjab09d'
+          />
+          <SideImageCard
+            image='https://picsum.photos/200/300'
+            tag='Citytuch'
+            title='Up to $599 discount'
+            subTitle='Domestic flight'
+            coupon='dhshjab09d'
+          />
         </div>
+      </div>
+      <div className='best-offers flex flex--column'>
+        <div className='section-header flex'>
+          <h2 className='section-title'>Best offers</h2>
+          <a href='#' className='btn btn--text'>
+            view more
+          </a>
+        </div>
+        <div className='offers-list flex flex--column'>
+          <ListItem image='https://random.imagecdn.app/500/500' title='Delhi, Toronto, Mexico' price='546' date='15 Aug - 22 Aug' />
+          <ListItem image='https://random.imagecdn.app/501/501' title='Chennai, Mumbai' price='345' date='15 Aug - 22 Aug' />
+          <ListItem image='https://random.imagecdn.app/502/502' title='Mumbai, Bangalore, Pune' price='435' date='15 Aug - 22 Aug' />
+          <ListItem image='https://random.imagecdn.app/503/503' title='Pune, Mumbai, Kolkata' price='541' date='15 Aug - 22 Aug' />
+          <ListItem image='https://random.imagecdn.app/504/504' title='Mumbai, Bangalore' price='390' date='15 Aug - 22 Aug' />
+        </div>
+      </div>
+      <div className='banner'>
+        <AdBanner title='Book Your Perfect Deals' price='547' priceTitle='Starting at' />
       </div>
     </div>
   );

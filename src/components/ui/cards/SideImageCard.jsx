@@ -1,24 +1,27 @@
 import React from 'react';
 import './cards.css';
 
-const SideImageCard = () => {
+const SideImageCard = ({ image, tag, title, subTitle = '', coupon, link = '#' }) => {
   return (
     <div className='side-image-card flex'>
       <div className='left'>
-        <img src='https://picsum.photos/200/300' alt='img' />
+        <img className='card-image' src={image} alt='img' />
+        <img className='card-image-shadow' src={image} alt='img' />
       </div>
       <div className='right'>
         <div className='card-body flex flex--column'>
           <div className='body-header flex flex--column'>
-            <p className='header-tag'>Citytuch</p>
-            <h3 className='header-title'>Up to $599 discount</h3>
-            <p className='header-sub-title'>Domestic flight</p>
+            <p className='header-tag'>{tag}</p>
+            <h3 className='header-title'>{title}</h3>
+            <p className='header-sub-title'> {subTitle}</p>
           </div>
           <div className='body-footer flex'>
             <p className='footer-content'>
-              Cupon:<span>dhshjab09d</span>
+              Coupon:<span>{coupon}</span>
             </p>
-            <button className='btn btn--red'>book now</button>
+            <a href={link} className='btn btn--red'>
+              book now
+            </a>
           </div>
         </div>
       </div>

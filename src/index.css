@@ -188,10 +188,16 @@ ul {
 }
 
 .btn--icon {
-  display: block;
-  width: 29px;
-  padding: 0;
-  margin: 0;
+  display: inline-flex;
+  width: max-content;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.122778px;
+  color: #282e44;
 }
 
 .btn--red {
@@ -206,4 +212,19 @@ ul {
   align-items: center;
   text-align: center;
   border-radius: 1rem;
+  text-transform: uppercase;
+}
+
+.btn--text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: var(--clr-text-dark);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  text-transform: uppercase;
 }
