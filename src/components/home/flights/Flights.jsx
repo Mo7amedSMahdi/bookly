@@ -16,7 +16,7 @@ const Flights = () => {
   };
 
   return (
-    <div className='flights'>
+    <div className='flights flex flex--column'>
       <div className='flights-search flex flex--column'>
         <div className='flights-trip'>
           <ul className='trip-list'>
@@ -50,8 +50,14 @@ const Flights = () => {
             </div>
           </form>
         </div>
-
+      </div>
+      <div className='offers flex flex--column'>
+        <h2 className='section-title'>Special Offer</h2>
         <div className='spacial-offers flex'>
+          <SideImageCard />
+          <SideImageCard />
+          <SideImageCard />
+          <SideImageCard />
           <SideImageCard />
           <SideImageCard />
         </div>

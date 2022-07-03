@@ -15,12 +15,10 @@ const SideImageCard = () => {
             <p className='header-sub-title'>Domestic flight</p>
           </div>
           <div className='body-footer flex'>
-            <div className='footer-content'>
-              <p>
-                Cupon:<span>dhshjab09d</span>
-              </p>
-            </div>
-            <button className='btn btn--border'>book now</button>
+            <p className='footer-content'>
+              Cupon:<span>dhshjab09d</span>
+            </p>
+            <button className='btn btn--red'>book now</button>
           </div>
         </div>
       </div>

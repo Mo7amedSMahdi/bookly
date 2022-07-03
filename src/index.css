@@ -12,6 +12,7 @@
   --clr-ored: rgba(223, 20, 45, 0.06);
   --clr-blue: #0076ff;
   --clr-blue-tab: #0a6ada;
+  --clr-body-bg: #eaeef2;
 
   --gr-bg-home: linear-gradient(180deg, #ebf0f3 24.26%, #ffffff 100%);
   --gr-bg-nav: linear-gradient(141.08deg, #0a69da 32.24%, #0856c8 115.93%, #0231a5 164.9%);
@@ -68,6 +69,7 @@ html,
 body,
 #root {
   height: 100%;
+  background: transparent;
 }
 
 /* Set core body defaults */
@@ -75,7 +77,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: var(--ff-sans);
-  background: var(--gr-bg-home);
+  background: var(--clr-body-bg);
   scroll-behavior: smooth;
 }
 
@@ -178,6 +180,7 @@ ul {
 .btn {
   padding-block: 0.5rem;
   padding-inline: 1rem;
+  width: max-content;
 }
 
 .btn--primary {
@@ -189,4 +192,18 @@ ul {
   width: 29px;
   padding: 0;
   margin: 0;
+}
+
+.btn--red {
+  background-color: var(--clr-ored);
+  color: var(--clr-red);
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
 }
